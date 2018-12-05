@@ -4,7 +4,7 @@ import rootReducer from '../reducers'
 import { batchStoreEnhancer, batchMiddleware } from './middleware/batch-enhancer';  // 通知发送多个dispatch
 import NullMiddleware from './middleware/null-string'
 
-import Config from '../config'
+import Global from '../global'
 
 
 const middlewares = [
@@ -13,7 +13,7 @@ const middlewares = [
   NullMiddleware
 ];
 
-if (Config.isDev) {
+if (Global.isDev) {
   const configMiddleware = require('./middleware-dev');
   middlewares.concat(configMiddleware)
 }

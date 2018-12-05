@@ -73,7 +73,7 @@ class Index extends Component {
       let name = 'asdasd';
       let sex = '男';
       console.log('------', name, sex)
-    Taro.request({url: '', method: 'POST', })
+    // Taro.request({url: '', method: 'POST', })
   }
 
   componentWillUnmount () { }
